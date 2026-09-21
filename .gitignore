@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.log
+dcms_audit.log
+dcms_audit_old.log
+infrastruktur.json
+infrastruktur_backup.json
+.venv/
+venv/

@@ -14,17 +14,17 @@ Beide Beispiele zeigen das gleiche Prinzip: eine Funktion (Event-Handler)
 reagiert auf ein Ereignis (`on_click`), verändert einen Control-Wert und
 ruft `page.update()` auf, damit die Änderung sichtbar wird.
 
-## Wichtiger Hinweis zur Flet-Version
+## Version
 
-`pip install flet` installiert aktuell standardmäßig **Flet 1.0**. Dort
-wurde `ft.ElevatedButton` in `ft.Button` umbenannt, und der Button-Text
-kommt über `content=` statt `text=`. Dieses Projekt nutzt bewusst die
-klassische API:
+Nutzt die aktuelle Standardversion von Flet (1.0):
 
 ```bash
-pip install flet==0.28.3
+pip install flet
 python gui_test.py
 ```
+
+In Flet 1.0 heißt der Button `ft.Button` (nicht mehr `ft.ElevatedButton`),
+und der Button-Text wird über `content=` statt `text=` gesetzt.
 
 ## Test
 

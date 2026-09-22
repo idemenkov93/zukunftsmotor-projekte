@@ -1,19 +1,18 @@
 """
 gui_test.py
 Uebung: Einstieg in grafische Oberflaechen mit Flet
-Datum: 21.09.2026
+Datum: 22.09.2026
 
 Teil 1: Leeres Grundgeruest (abgetippt nach Vorlage aus der Praesentation)
 Teil 2: Echo-App mit Event Handling (Textfeld + Button + Label)
 Bonus:  Klick-Zaehler (zweites Beispiel fuer Event Handling)
 
-Wichtig zur Flet-Version:
-"pip install flet" installiert seit Kurzem standardmaessig Flet 1.0.
-Dort wurde ft.ElevatedButton in ft.Button umbenannt und der Text kommt
-nicht mehr ueber text=, sondern ueber content=. Die Kursfolien sind
-noch fuer die alte, klassische API geschrieben (ft.ElevatedButton,
-text=). Deshalb hier: pip install flet==0.28.3
-Damit laeuft der Code aus den Folien 1:1, ohne Anpassungen.
+Hinweis zur Flet-Version:
+Dieses Projekt nutzt die Standardversion, die "pip install flet" aktuell
+installiert: Flet 1.0. Dort heisst der Button ft.Button (frueher hiess er
+ft.ElevatedButton), und der Button-Text kommt ueber content=, nicht mehr
+ueber text=. Der Rest (TextField, Text, Row, Column, page.update()) ist
+gleich geblieben.
 """
 
 import flet as ft
@@ -36,7 +35,7 @@ def main(page: ft.Page):
         ausgabe_label.value = eingabe.value
         page.update()  # Goldene Regel: ohne update() sieht man die Aenderung nicht!
 
-    echo_button = ft.ElevatedButton(text="Anzeigen", on_click=echo_klick)
+    echo_button = ft.Button(content="Anzeigen", on_click=echo_klick)
 
     # ---------------------------------------------------------------
     # Bonus: Klick-Zaehler
@@ -52,7 +51,7 @@ def main(page: ft.Page):
         zaehler_label.value = f"Klicks: {zaehlerstand}"
         page.update()
 
-    zaehler_button = ft.ElevatedButton(text="Klick mich", on_click=zaehler_klick)
+    zaehler_button = ft.Button(content="Klick mich", on_click=zaehler_klick)
 
     # ---------------------------------------------------------------
     # Layout: alles der Page hinzufuegen
@@ -68,4 +67,4 @@ def main(page: ft.Page):
 
 
 if __name__ == "__main__":
-    ft.app(target=main)
+    ft.run(main)

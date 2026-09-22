@@ -11,6 +11,12 @@ Server-Infrastruktur (Server anlegen, IPs pflegen, Log-Auswertung,
 externe IP-Abfrage). Fokus: sauberes OOP-Design, Vererbung, JSON-Persistenz,
 Fehlerbehandlung.
 
+### [dcms-backend-engine-gui](./dcms-backend-engine-gui)
+Eigene Weiterentwicklung von dcms-backend-engine: dieselbe Businesslogik,
+aber mit einer grafischen Oberfläche (Flet 1.0) statt Text-Menü im Terminal.
+Server-Karten mit Ampel-Farben, Dialoge zum Anlegen/Bearbeiten/Löschen,
+Netzwerkstatus-Check und Log-Report per Klick.
+
 ### [flet-echo-app](./flet-echo-app)
 Erster Einstieg in grafische Oberflächen (GUI) mit dem Python-Framework
 [Flet](https://flet.dev). Event-Driven Programming statt klassischer
